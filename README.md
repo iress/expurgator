@@ -48,3 +48,10 @@ To run all tests, simply do:
 ```sh
 py.test
 ```
+
+
+## Legal
+
+Copyright 2018 [IRESS Ltd](https://www.iress.com/).
+
+License: Apache License 2.0.
