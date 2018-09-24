@@ -1,0 +1,24 @@
+# Config file for automatic testing at travis-ci.org
+
+language: python
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+
+python:
+  - "2.7"
+  - "pypy"
+  - "3.5"
+  - "3.6"
+
+install:
+  - "pip install --upgrade pip"
+  - "python setup.py install"
+  - "pip install pytest"
+
+script:
+  - py.test --verbose tests
+
+after_success:
+  coveralls
