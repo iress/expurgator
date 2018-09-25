@@ -26,6 +26,10 @@ setuptools.setup(
     install_requires=['six'],
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
+    extras_require={
+        'dev': [
+            'pytest>=3', 'coverage', 'coveralls', 'setuptools>=27.3,<38.6',
+            'wheel==0.30']},
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',

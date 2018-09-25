@@ -2,6 +2,9 @@
 
 Censor sensitive string data in Python.
 
+[![Build Status](https://travis-ci.com/Iress/expurgator.svg?branch=master)](https://travis-ci.com/Iress/expurgator)
+[![Coverage Status](https://coveralls.io/repos/github/Iress/expurgator/badge.svg?branch=master)](https://coveralls.io/github/Iress/expurgator?branch=master)
+
 ## Quickstart
 
 Install with:

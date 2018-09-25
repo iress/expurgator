@@ -15,10 +15,10 @@ python:
 install:
   - "pip install --upgrade pip"
   - "python setup.py install"
-  - "pip install pytest"
+  - "pip install -e .[dev]"
 
 script:
-  - py.test --verbose tests
+  - "coverage run py.test --verbose tests"
 
 after_success:
   coveralls
