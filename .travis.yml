@@ -22,3 +22,11 @@ script:
 
 after_success:
   coveralls
+
+deploy:
+  provider: pypi
+  user: Jaza
+  password:
+    secure: RqBmr5mpPXQKs7aFbw2ghsLe1umS039KiuWw3cE8/RoJg3+fTMya/DoDxh85z++3dmtLHq5lWJQCl7c3daR3o/XlH4jDyXzwQqRIYGdgiKcd3ZAbf22MzXjRSpRYFlgCgH2F0sd0UgAu5FinzPE3Tvk7wDtxryhV4W/nK7TIBjyDzHChZifqUrdf8jIRw92tLDrUW2rxUsKb+Lc3GQZGrhIawY8FuB4rsTvrtpP1IF3E62RrBEXDZGzLGFbPfavV3uHyO61lhxklZ+3+Iz3j7biPxl1AGlguDVKZv4FTGXNMMMK9kt4qPA7x+2hd3MwIsUhZOymFiMrTaGtx1Jnu2//2+Kl3+9MqsMdqwnhmAZ2cLdUB3OcwamIGHPAZlAzYZYNxq9L/dCda5B4jPKH4c5gMee3IstN5HSqxe/orpDrEa5sXhlp8TpXRoWW3ZREwoqyMJOHgabVYcTIQBrQ+Ke3JGgXwC6ljcloGncjdPcy8S67+hfMRz1UKy+1Vro06OVpGNYE/VHXEHllbIonGv7cMDri2SbOeKIur0TE9jaYS3rLYwZy9wtBATJSHLoBds1BJHuWA7eLRQs4LIvAt8GyDagHx1KB2/ZHNhI316D3F4sASHIz0bMIMp2rKQ5/vL2Yr4GL+/jwT54UJey6ZmnA1/V628jhnIxmCD0v7YSI=
+  on:
+    tags: true
