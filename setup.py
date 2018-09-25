@@ -18,6 +18,7 @@ setuptools.setup(
 
     description="Censor sensitive string data in Python.",
     long_description=open('README.md').read(),
+    long_description_content_type="text/markdown",
 
     py_modules=['expurgator'],
     zip_safe=False,
@@ -28,8 +29,8 @@ setuptools.setup(
     tests_require=['pytest'],
     extras_require={
         'dev': [
-            'pytest>=3', 'coverage', 'coveralls', 'setuptools>=27.3,<38.6',
-            'wheel==0.30']},
+            'pytest>=3', 'coverage', 'coveralls', 'setuptools>=38.6',
+            'wheel']},
 
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
