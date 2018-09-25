@@ -30,7 +30,7 @@ class TestExpurgator(object):
             "password": "1337haxx0r",
             "clandestineinfo": "re-inforcements on their way",
             "froggies": [3, 4, 5]}
-        sensitive_variable_names = ['clandestineinfo', 'hushhush']
+        sensitive_variable_names = {'clandestineinfo', 'hushhush'}
 
         # exercise
         result = shallow_dict_expurgator(

@@ -1,18 +1,18 @@
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 
 
 from six import iteritems, string_types, text_type
 
 
 # names of variables that should always be hidden (lower case only)
-COMMON_SENSITIVE_VARIABLE_NAMES = [
+COMMON_SENSITIVE_VARIABLE_NAMES = {
     'pass',
     'pw',
     'secret',
     'app_id',
     'token',
     'session_key',
-    'sessionkey']
+    'sessionkey'}
 
 
 def is_sensitive_name(name, sensitive_variable_names=None):
@@ -20,8 +20,8 @@ def is_sensitive_name(name, sensitive_variable_names=None):
 
     Args:
         name (any): The name to check
-        sensitive_variable_names (Optional[list]): The list of names
-            that are considered sensitive (defaults to
+        sensitive_variable_names (Optional[set]): The names that are
+            considered sensitive (defaults to
             expurgator.COMMON_SENSITIVE_VARIABLE_NAMES)
 
     Returns:
@@ -48,7 +48,7 @@ def shallow_key_value_expurgator(
     Args:
         key (any): The key to check
         value (any): The value to censor
-        sensitive_variable_names (Optional[list]): names of variables to
+        sensitive_variable_names (Optional[set]): names of variables to
             censor (defaults to
             expurgator.COMMON_SENSITIVE_VARIABLE_NAMES)
 
@@ -70,7 +70,7 @@ def shallow_dict_expurgator(obj, sensitive_variable_names=None):
 
     Args:
         obj (Mapping): the obj to check and encode
-        sensitive_variable_names (Optional[list]): names of variables to
+        sensitive_variable_names (Optional[set]): names of variables to
             censor (defaults to
             expurgator.COMMON_SENSITIVE_VARIABLE_NAMES)
 
